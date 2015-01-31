@@ -71,3 +71,23 @@ footer {
 	padding-right: 10px;
 	margin-top: 0px;	
 }
+
+.produto-tabela input {
+	width: 99%;
+}
+
+/* Customiza tabview - início */
+.ui-tabs .ui-tabs-panel {
+	padding: 0.5em 0.2em !important;
+}
+
+.ui-tabs {
+	padding: 0px !important;
+}
+
+.ui-tabs .ui-tabs-nav {
+	margin: -1px !important;
+	padding: 0px !important;
+}
+
+/* Customiza tabview - fim */

@@ -5,13 +5,13 @@
 	xmlns:p="http://primefaces.org/ui">
 
 	<p:panelGrid columns="4" style="width: 100%; margin-top: 20px" columnClasses="rotulo, campo, rotulo, campo">
-		<p:outputLabel value="Número"/>
+		<p:outputLabel value="Número" />
 		<h:outputText value="12345" />
 	
-		<p:outputLabel value="Data de criação"/>
+		<p:outputLabel value="Data de criação" />
 		<h:outputText value="31/01/2015" />
 		
-		<p:outputLabel value="Statuss"/>
+		<p:outputLabel value="Status" />
 		<h:outputText value="Orçamento" />
 		
 		<p:outputLabel value="Vendedor" for="vendedor" />
@@ -20,6 +20,26 @@
 			<f:selectItem itemLabel="João das Couves Junior" />
 		</p:selectOneMenu>
 		
+		<p:outputLabel value="Cliente" for="cliente" />
+		<p:autoComplete id="cliente" dropdown="true" />
+		
+		<p:outputLabel value="Forma de pagamento" for="formaPagamento" />
+		<p:selectOneMenu id="formaPagamento">
+			<f:selectItem itemLabel="Selecione" />
+			<f:selectItem itemLabel="Cartão de crédito" />
+		</p:selectOneMenu>
+		
+		<p:outputLabel value="Valor do frete" for="valorFrete" />
+		<p:inputText id="valorFrete" size="10" maxlength="10" />
+		
+		<p:outputLabel value="Subtotal" style="font-weight: bold" />
+		<h:outputText id="subtotal" value="R$ 0,00" style="font-weight: bold" />
+		
+		<p:outputLabel value="Valor do desconto" for="valorDesconto" />
+		<p:inputText id="valorDesconto" size="10" maxlength="10" />
+		
+		<p:outputLabel value="Total do pedido" style="font-weight: bold; font-size: 1.1em" />
+		<h:outputText id="totalpedido" value="R$ 0,00" style="font-weight: bold; font-size: 1.1em" />
 		
 
 	</p:panelGrid>
