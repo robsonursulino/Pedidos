@@ -4,39 +4,31 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
 
-	<p:dataTable value="#{cadastroPedidoBean.itens}" var="item" id="tabelaItens">
-		<p:column headerText="SKU" style="text-align: center; width: 100px">
-			<p:inputText size="8" />
-		</p:column>
+	<p:panelGrid columns="4" style="width: 100%" columnClasses="rotulo, campo, rotulo, campo">
+		<p:outputLabel value="Data da entrega" for="dataEntrega" />
+		<p:calendar id="dataEntrega" size="10" pattern="dd/MM/yyyy" />
 		
-		<p:column headerText="Produto">
-			<p:autoComplete  styleClass="produto-tabela" style="width: 99%" />
-		</p:column>
+		<p:spacer />
+		<p:spacer />
+
+		<p:outputLabel value="Logradouro" for="entregaLogradouro" />
+		<p:inputText id="entregaLogradouro" size="50" />
+	
+		<p:outputLabel value="Número" for="entregaNumero" />
+		<p:inputText id="entregaNumero" size="5" />
 		
-		<p:column headerText="Valor unitário" style="text-align: right; width: 120px">
-			<h:outputText value="R$ 0,00" />
-		</p:column>
-
-		<p:column headerText="Quantidade" style="text-align: center; width: 100px">
-			<p:inputText size="8" value="1" />
-		</p:column>
-
-		<p:column headerText="Estoque" style="text-align: center; width: 100px">
-			<h:outputText value="0" />
-		</p:column>
-
-		<p:column headerText="Valor total" style="text-align: right; width: 100px">
-			<h:outputText value="R$ 0,00" />
-		</p:column>
+		<p:outputLabel value="Complemento" for="entregaComplemento" />
+		<p:inputText id="entregaComplemento" size="50" />
 		
-		<p:columnGroup type="footer">
-			<p:row>
-				<p:column colspan="5" footerText="Subtotal" style="text-align: right" />
-				<p:column footerText="R$ 0,00" style="text-align: right" />
-			</p:row>
-		</p:columnGroup>
+		<p:outputLabel value="Cidade" for="entregaCidade" />
+		<p:inputText id="entregaCidade" size="20" />
 
-	</p:dataTable>
+		<p:outputLabel value="Estado" for="entregaEstado" />
+		<p:inputText id="entregaEstado" size="20" />
+
+		<p:outputLabel value="CEP" for="entregaCep" />
+		<p:inputText id="entregaCep" size="10" />
+	</p:panelGrid>
 		
 </ui:composition>
 	
