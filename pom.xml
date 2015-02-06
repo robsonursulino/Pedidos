@@ -25,6 +25,14 @@
 	</properties>
 
 	<dependencies>
+	    <!-- Weld (implementação do CDI) -->
+        <dependency>
+            <groupId>org.jboss.weld.servlet</groupId>
+            <artifactId>weld-servlet</artifactId>
+            <version>2.2.9.Final</version>
+            <scope>compile</scope>
+        </dependency>
+	
 		<!-- Mojarra (implementação do JSF 2) -->
 		<dependency>
 			<groupId>org.glassfish</groupId>
