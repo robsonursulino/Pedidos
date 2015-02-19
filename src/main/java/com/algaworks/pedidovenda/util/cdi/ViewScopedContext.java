@@ -17,11 +17,11 @@ import javax.faces.event.SystemEventListener;
 
 /**
  * Copied from Seam Faces 3.1.0.
- * 
+ *
  * @author Steve Taylor
  */
 public class ViewScopedContext implements Context, SystemEventListener {
-	
+
 	@SuppressWarnings("unchecked")
 	@Override
 	public <T> T get(final Contextual<T> component) {
@@ -37,6 +37,7 @@ public class ViewScopedContext implements Context, SystemEventListener {
 		return instance;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public <T> T get(final Contextual<T> component, final CreationalContext<T> creationalContext) {
 		assertActive();
@@ -94,7 +95,7 @@ public class ViewScopedContext implements Context, SystemEventListener {
 	 * contextual instances. This should (theoretically!) also get fired if the
 	 * webapp closes, so there should be no need to manually track all view
 	 * scopes and destroy them at a shutdown.
-	 * 
+	 *
 	 * @see javax.faces.event.SystemEventListener#processEvent(javax.faces.event.SystemEvent)
 	 */
 	@Override
