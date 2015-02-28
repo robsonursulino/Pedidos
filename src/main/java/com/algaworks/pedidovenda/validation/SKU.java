@@ -16,7 +16,7 @@ import javax.validation.constraints.Pattern;
  * Deve ser digitado os dois primeiro caracteres como letras maiúsculas ou
  * minúsculas e o restante deve ser números.
  * <p/>
- * Ex: HP520369
+ * Ex: XX9999
  * <p/>
  *
  * @author Robson
